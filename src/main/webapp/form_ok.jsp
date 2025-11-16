@@ -7,7 +7,7 @@
     <title>폼 전송 결과</title>
 </head>
 <body>
-<h2>개인 페이지 </h2>
+<h2>폼에서 받아온 데이터</h2>
 
 
 <p>아이디: <%= request.getParameter("user_id") %></p>
@@ -27,7 +27,7 @@
 
 <p>혈액형: <%= request.getParameter("blood_type") %></p>
 
-<p>한줄 소개:</p>
+<p>남기는 말:</p>
 <pre><%= request.getParameter("memo") %></pre>
 
 <br>
