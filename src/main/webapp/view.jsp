@@ -11,25 +11,32 @@
 <html>
 <head>
     <title>글 상세보기</title>
-    <style>
-        .container { width: 60%; margin: 20px auto; padding: 20px; border: 1px solid #ccc; }
-        .btn-group { margin-top: 20px; }
-        .btn-group a { margin-right: 10px; padding: 5px 10px; background-color: #eee; border: 1px solid #bbb; text-decoration: none; color: black; }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<div class="container">
-    <h2><%= mockTitle %></h2>
-    <p><strong>작성자:</strong> <%= mockWriter %></p>
-    <hr>
-    <pre><%= mockContent %></pre>
 
-    <div class="btn-group">
-        <a href="edit.jsp?id=<%= id %>">수정 (edit)</a>
+<div class="container mt-5" style="max-width: 800px;">
 
-        <a href="list.jsp" onclick="alert('삭제(delete) 버튼 링크 연결됨 (Mock)'); return false;">삭제 (delete)</a>
-        <a href="list.jsp">목록으로</a>
+    <div class="card">
+        <div class="card-header">
+            <h3><%= mockTitle %></h3>
+            <div class="text-muted small">
+                작성자: <%= mockWriter %>
+            </div>
+        </div>
+        <div class="card-body">
+            <p style="white-space: pre-wrap;"><%= mockContent %></p>
+        </div>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-between">
+        <a href="list.jsp" class="btn btn-secondary">목록</a>
+        <div>
+            <a href="edit.jsp?id=<%= id %>" class="btn btn-outline-primary">수정</a>
+            <a href="delete_ok.jsp?id=<%= id %>" class="btn btn-outline-danger">삭제</a>
+        </div>
     </div>
 </div>
+
 </body>
 </html>
