@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>새 글 작성</title>
+    <style>
+        form { width: 50%; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        p { margin-bottom: 15px; }
+        label { display: inline-block; width: 100px; }
+        input[type=text], textarea { width: calc(100% - 110px); }
+        textarea { vertical-align: top; }
+        .btn-group { text-align: center; }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center;">새 글 작성</h2>
+
+<form action="write_ok.jsp" method="post">
+    <p>
+        <label for="title">제목:</label>
+        <input type="text" id="title" name="title" required>
+    </p>
+    <p>
+        <label for="writer">작성자:</label>
+        <input type="text" id="writer" name="writer" required>
+    </p>
+    <p>
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" required>
+    </p>
+    <p>
+        <label for="category">카테고리:</label>
+        <select id="category" name="category">
+            <option value="notice">공지</option>
+            <option value="free">자유</option>
+            <option value="qna">질문</option>
+        </select>
+    </p>
+    <p>
+        <label for="content">내용:</label>
+        <textarea id="content" name="content" rows="10"></textarea>
+    </p>
+
+    <div class="btn-group">
+        <input type="submit" value="작성 완료">
+        <a href="list.jsp"><input type="button" value="목록으로"></a>
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>JSP 폼 테스트</title>
+</head>
+<body>
+
+<h2>정보 입력 폼</h2>
+
+<form action="form_ok.jsp" method="post">
+
+  <p>
+    <label for="user_id">아이디:</label>
+    <input type="text" id="user_id" name="user_id">
+  </p>
+
+  <p>
+    <label for="user_pw">비밀번호:</label>
+    <input type="password" id="user_pw" name="user_pw">
+  </p>
+
+  <p>
+    성별:
+    <label><input type="radio" name="gender" value="male"> 남성</label>
+    <label><input type="radio" name="gender" value="female"> 여성</label>
+  </p>
+
+  <p>
+    관심사 (중복 가능):
+    <label><input type="checkbox" name="hobby" value="coding"> 코딩</label>
+    <label><input type="checkbox" name="hobby" value="exercise"> 운동</label>
+    <label><input type="checkbox" name="hobby" value="reading"> 독서</label>
+    <label><input type="checkbox" name="hobby" value="guitar"> 기타</label>
+  </p>
+
+  <p>
+    <label for="blood_type">혈액형:</label>
+    <select id="blood_type" name="blood_type">
+      <option value="">선택하세요</option>
+      <option value="A">A형</option>
+      <option value="B">B형</option>
+      <option value="O">O형</option>
+      <option value="AB">AB형</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="memo">한줄 소개:</label><br>
+    <textarea id="memo" name="memo" rows="5" cols="30"></textarea>
+  </p>
+
+  <input type="submit" value="전송하기">
+
+</form>
+
+</body>
+</html>
