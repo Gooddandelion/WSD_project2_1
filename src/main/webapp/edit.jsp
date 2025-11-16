@@ -10,39 +10,45 @@
 <head>
   <meta charset="UTF-8">
   <title>글 수정</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    form { width: 50%; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+    p { margin-bottom: 15px; }
+    label { display: inline-block; width: 100px; }
+    input[type=text], textarea { width: calc(100% - 110px); }
+    textarea { vertical-align: top; }
+    .btn-group { text-align: center; }
+  </style>
 </head>
 <body>
 
-<div class="container mt-5" style="max-width: 800px;">
-  <h2 class="text-center mb-4">글 수정 (ID: <%= id %>)</h2>
+<h2 style="text-align: center;">글 수정 (ID: <%= id %>)</h2>
 
-  <form action="edit_ok.jsp" method="post">
-    <input type="hidden" name="id" value="<%= id %>">
+<form action="edit_ok.jsp" method="post">
 
-    <div class="mb-3">
-      <label for="title" class="form-label">제목</label>
-      <input type="text" class="form-control" id="title" name="title" value="<%= mockTitle %>">
-    </div>
-    <div class="mb-3">
-      <label for="writer" class="form-label">작성자</label>
-      <input type="text" class="form-control" id="writer" name="writer" value="<%= mockWriter %>">
-    </div>
-    <div class="mb-3">
-      <label for="password" class="form-label">비밀번호</label>
-      <input type="password" class="form-control" id="password" name="password" placeholder="수정/삭제 시 비밀번호 입력">
-    </div>
-    <div class="mb-3">
-      <label for="content" class="form-label">내용</label>
-      <textarea class="form-control" id="content" name="content" rows="10"><%= mockContent %></textarea>
-    </div>
+  <input type="hidden" name="id" value="<%= id %>">
 
-    <div class="d-flex justify-content-between">
-      <a href="view.jsp?id=<%= id %>" class="btn btn-secondary">취소</a>
-      <button type="submit" class="btn btn-primary">수정 완료</button>
-    </div>
-  </form>
-</div>
+  <p>
+    <label for="title">제목:</label>
+    <input type="text" id="title" name="title" value="<%= mockTitle %>">
+  </p>
+  <p>
+    <label for="writer">작성자:</label>
+    <input type="text" id="writer" name="writer" value="<%= mockWriter %>">
+  </p>
+  <p>
+    <label for="password">비밀번호:</label>
+    <input type="password" id="password" name="password" placeholder="수정/삭제 시 비밀번호 입력">
+  </p>
+  <p>
+    <label for="content">내용:</label>
+    <textarea id="content" name="content" rows="10"><%= mockContent %></textarea>
+  </p>
+
+  <div class="btn-group">
+    <input type="submit" value="수정 완료">
+    <a href="view.jsp?id=<%= id %>"><input type="button" value="취소 (상세보기로)"></a>
+  </div>
+</form>
 
 </body>
 </html>
