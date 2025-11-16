@@ -7,24 +7,24 @@
 
   HashMap<String, String> post1 = new HashMap<>();
   post1.put("id", "1");
-  post1.put("title", "첫 번째 Mock 데이터입니다");
-  post1.put("writer", "김철수");
+  post1.put("title", "11주차 피곤하네요");
+  post1.put("writer", "박헌일");
   post1.put("createdAt", "2025-11-15");
   post1.put("views", "10"); // 항목 5개 이상 (조회수 추가)
   boardList.add(post1);
 
   HashMap<String, String> post2 = new HashMap<>();
   post2.put("id", "2");
-  post2.put("title", "JSP는 재미있네요");
-  post2.put("writer", "이영희");
+  post2.put("title", "벌써 기말이 한달밖에,,");
+  post2.put("writer", "조우진");
   post2.put("createdAt", "2025-11-16");
   post2.put("views", "22");
   boardList.add(post2);
 
   HashMap<String, String> post3 = new HashMap<>();
   post3.put("id", "3");
-  post3.put("title", "CRUD 페이지 만드는 중");
-  post3.put("writer", "박개발");
+  post3.put("title", "취직 언제 하죠?");
+  post3.put("writer", "무직백수");
   post3.put("createdAt", "2025-11-17");
   post3.put("views", "5");
   boardList.add(post3);

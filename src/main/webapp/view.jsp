@@ -3,9 +3,9 @@
 
     String id = request.getParameter("id");
 
-    String mockTitle = "제목 예시 (ID: " + id + ")";
-    String mockWriter = "작성자 예시";
-    String mockContent = "여기는 DB에서 가져온 글 내용이 표시됩니다.\n\n" +
+    String mockTitle = "과제 제출합니다 (ID: " + id + ")";
+    String mockWriter = "박헌일";
+    String mockContent = "만점 부탁드려요\n\n" +
             "글 번호 " + id + "번을 보고 계십니다.";
 %>
 <html>
