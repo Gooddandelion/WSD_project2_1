@@ -27,7 +27,7 @@
     <div class="btn-group">
         <a href="edit.jsp?id=<%= id %>">수정 (edit)</a>
 
-        <a href="delete_ok.jsp">삭제 (delete)</a>
+        <a href="delete_ok.jsp?id=<%= id %>">삭제 (delete)</a>
         <a href="list.jsp">목록으로</a>
     </div>
 </div>
